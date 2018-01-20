@@ -2,8 +2,30 @@
 <html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Brew-Wary Search</title>
+
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Bootstrap CDN-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- Firebase Reference -->
+  <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+
+  <!-- Moment -->
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/style.css">
 </head>
+
+
 
 <body>
 
@@ -11,7 +33,10 @@
 
     <!-- Jumbotron for Title -->
     <div class="jumbotron" style="background-color:#FFBF00; color: white;">
-      <h1 class="text-center"><strong></i> Brewster</strong></h1>
+      <h1 class="text-center">
+        <strong>
+          </i> Brewster</strong>
+      </h1>
     </div>
 
     <div class="row">
@@ -20,7 +45,10 @@
 
         <div class="panel panel-primary">
           <div class="panel-heading">
-            <h3 class="panel-title"><strong></i>   Search Parameters</strong></h3>
+            <h3 class="panel-title">
+              <strong>
+                </i> Search Parameters</strong>
+            </h3>
           </div>
           <div class="panel-body">
 
@@ -35,11 +63,11 @@
               <div class="form-group">
                 <label for="pwd">Number of Options:</label>
                 <select class="form-control" id="num-records-select">
-                            <option value="1">1</option>
-                            <!-- Setting the option for 5 as default -->
-                            <option value="5" selected>5</option>
-                            <option value="10">10</option>
-                        </select>
+                  <option value="1">1</option>
+                  <!-- Setting the option for 5 as default -->
+                  <option value="5" selected>5</option>
+                  <option value="10">10</option>
+                </select>
               </div>
 
               <div class="form-group">
@@ -52,8 +80,10 @@
                 <input type="text" class="form-control" id="location">
               </div>
 
-              <button type="submit" class="btn btn-default" id="run-search"></i> Search</button>
-              <button type="button" class="btn btn-default" id="clear-all"></i> Clear Results</button>
+              <button type="submit" class="btn btn-default" id="run-search">
+                </i> Search</button>
+              <button type="button" class="btn btn-default" id="clear-all">
+                </i> Clear Results</button>
 
             </form>
           </div>
@@ -71,11 +101,14 @@
 
           <!-- Panel Heading for the retrieved articles box -->
           <div class="panel-heading">
-            <h3 class="panel-title"><strong></i>   Top Brews</strong></h3>
+            <h3 class="panel-title">
+              <strong>
+                </i> Top Brews</strong>
+            </h3>
           </div>
 
-<!--//Hold each of the resulting options -->
-            <div class="panel-body" id="beer-section">
+          <!--//Hold each of the resulting options -->
+          <div class="panel-body" id="beer-section">
           </div>
         </div>
       </div>
@@ -87,7 +120,10 @@
 
         <!-- Line Break followed by closing -->
         <hr>
-        <h5 class="text-center"><small>Be Brew-wary</i></small></h5>
+        <h5 class="text-center">
+          <small>Be Brew-wary</i>
+          </small>
+        </h5>
 
       </div>
     </div>
