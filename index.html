@@ -39,9 +39,13 @@
     <div class="jumbotron">
       <h1>
         <strong>
-          <i> Brewster </i><span id= "image"> <img src="assets/images/beerpour.jpg" alt="..." align="right" class="img-circle"></span></strong>
+          <i> Brewster </i>
+          <span id="image">
+            <img src="assets/images/craftbeer.jpg" alt="..." align="right" class="img-circle">
+          </span>
+        </strong>
       </h1>
-     
+
     </div>
 
     <div class="row">
@@ -94,6 +98,9 @@
           </div>
         </div>
       </div>
+      <div class="image">
+        <img src="assets/images/ingredients.png" alt="..." align="right" class="img-rounded">
+      </div>
     </div>
 
     <!-- This row will handle all of the retrieved articles -->
@@ -124,11 +131,11 @@
       <div class="col-sm-12">
         <div id="footer">
 
-        <!-- Line Break followed by closing -->
-        <hr>
-        <h5>Be Brew-wary</i>
-        </h5>
-      </div>
+          <!-- Line Break followed by closing -->
+          <hr>
+          <h5>Be Brew-wary</i>
+          </h5>
+        </div>
 
       </div>
     </div>
@@ -138,5 +145,20 @@
   <!-- //this is my shit -->
 
 </body>
+
+<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAm_nwrEHI-HAzrUa-YiRCMbcuoA24x7vA",
+    authDomain: "breweryproject-223c8.firebaseapp.com",
+    databaseURL: "https://breweryproject-223c8.firebaseio.com",
+    projectId: "breweryproject-223c8",
+    storageBucket: "",
+    messagingSenderId: "675321245147"
+  };
+  firebase.initializeApp(config);
+</script>
+
 
 </html>
