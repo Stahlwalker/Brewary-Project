@@ -1,37 +1,36 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Brew-Wary Search</title>
 
+    <meta charset="UTF-8">
+    <title>Testing API's</title>
 
-  <!-- jQuery -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  <!-- Bootstrap CDN-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Firebase Reference -->
+  	<script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
 
-  <!-- Firebase Reference -->
-  <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+  	<!-- CSS -->
+  	<link rel="stylesheet" type="text/css" href="assets/style.css">
 
-  <!-- Moment -->
-  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+  	<!-- Annimate CDN -->
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
-  <!-- CSS -->
-  <link rel="stylesheet" type="text/css" href="assets/style.css">
-
-  <!-- Annimate CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-
+     <style>
+       #map {
+        height: 400px;
+        width: 100%;
+        margin-top: 25px;
+       }
+    </style>
+  
 </head>
 
-
-
-<body>
+  <body>
 
   <div class="container">
 
@@ -103,7 +102,7 @@
       </div>
     </div>
 
-    <!-- This row will handle all of the retrieved articles -->
+
     <div class="row">
       <div class="col-sm-6">
         <br>
@@ -119,12 +118,33 @@
             </h3>
           </div>
 
-          <!--//Hold each of the resulting options -->
-          <div class="panel-body" id="beer-section">
-          </div>
+<!--//Hold each of the resulting options -->
+            <div class="panel-body" id="beer-section">
+            	<table id="beer-table">
+            		<thead>
+            			<tr>
+            				<th>Beer Name</th>
+            				<th>Brewery</th>
+            				<th>ABV</th>
+            				<th>Beer Style</th>
+            				<th>Glass Type</th>
+            			</tr>
+            		</thead>
+
+            		<tbody></tbody>
+            	</table>			
+            </div>
+           
         </div>
-      </div>
+
+       </div>
+
+       <div class="col-sm-6">
+        	<div id="map"></div>
+       </div>
     </div>
+
+		
 
     <!-- Footer Region -->
     <div class="row">
@@ -142,23 +162,15 @@
 
   </div>
 
-  <!-- //this is my shit -->
+  			
 
-</body>
 
-<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyAm_nwrEHI-HAzrUa-YiRCMbcuoA24x7vA",
-    authDomain: "breweryproject-223c8.firebaseapp.com",
-    databaseURL: "https://breweryproject-223c8.firebaseio.com",
-    projectId: "breweryproject-223c8",
-    storageBucket: "",
-    messagingSenderId: "675321245147"
-  };
-  firebase.initializeApp(config);
+
+<script type="text/javascript" src="app.js"></script>
+
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRoBFgQ8l2qx8Q5JVqkyWcqc3SqcGBuBY&callback=initMap">
 </script>
 
-
+</body>	
 </html>
