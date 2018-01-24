@@ -23,6 +23,10 @@
 
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="assets/style.css">
+
+  <!-- Annimate CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
 </head>
 
 
@@ -32,18 +36,19 @@
   <div class="container">
 
     <!-- Jumbotron for Title -->
-    <div class="jumbotron" style="background-color:#FFBF00; color: white;">
-      <h1 class="text-center">
+    <div class="jumbotron">
+      <h1>
         <strong>
-          </i> Brewster</strong>
+          <i> Brewster </i><span id= "image"> <img src="assets/images/beerpour.jpg" alt="..." align="right" class="img-circle"></span></strong>
       </h1>
+     
     </div>
 
     <div class="row">
-      <div class="col-sm-12">
+      <div class="col-sm-6">
         <br>
 
-        <div class="panel panel-primary">
+        <div class="panel panel-danger">
           <div class="panel-heading">
             <h3 class="panel-title">
               <strong>
@@ -93,11 +98,11 @@
 
     <!-- This row will handle all of the retrieved articles -->
     <div class="row">
-      <div class="col-sm-12">
+      <div class="col-sm-6">
         <br>
 
         <!-- This panel will initially be made up of a panel and wells for each of the articles retrieved -->
-        <div class="panel panel-primary">
+        <div class="panel panel-danger">
 
           <!-- Panel Heading for the retrieved articles box -->
           <div class="panel-heading">
@@ -117,13 +122,13 @@
     <!-- Footer Region -->
     <div class="row">
       <div class="col-sm-12">
+        <div id="footer">
 
         <!-- Line Break followed by closing -->
         <hr>
-        <h5 class="text-center">
-          <small>Be Brew-wary</i>
-          </small>
+        <h5>Be Brew-wary</i>
         </h5>
+      </div>
 
       </div>
     </div>

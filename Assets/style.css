@@ -1,5 +1,37 @@
 body {
     /* background: blue; */
     background-image: url('images/beer3.jpg');
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
  
+
+.jumbotron {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: flip;
+    background-color: #2f3233;
+    color: rgb(231, 142, 101);
+    margin-top: 50px;
+    padding: 5px;
+    padding-bottom: 53px;
+    text-align: left;
+    font-size: 18px;
+
+  }
+
+#image {
+    text-align: right;
+}
+
+.panel {
+    background-color: #2f3233;
+    color: white;
+
+}
+
+#footer {
+    background-color: #2f3233;
+    color: rgb(231, 142, 101);
+    text-align: center;
+    padding-bottom: 10px;
+}
