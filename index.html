@@ -20,13 +20,6 @@
   	<!-- Annimate CDN -->
   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
-     <style>
-       #map {
-        height: 400px;
-        width: 100%;
-        margin-top: 25px;
-       }
-    </style>
   
 </head>
 
@@ -97,14 +90,17 @@
           </div>
         </div>
       </div>
-      <div class="image">
+      <div class="col-sm-6">
+        <div id="map"></div>
+     </div>
+      <!-- <div class="image">
         <img src="assets/images/ingredients.png" alt="..." align="right" class="img-rounded">
-      </div>
+      </div> -->
     </div>
 
 
     <div class="row">
-      <div class="col-sm-6">
+      <div class="col-sm-12">
         <br>
 
         <!-- This panel will initially be made up of a panel and wells for each of the articles retrieved -->
@@ -119,7 +115,7 @@
           </div>
 
 <!--//Hold each of the resulting options -->
-            <div class="panel-body" id="beer-section">
+            <div class="panel-body2" id="beer-section">
             	<table id="beer-table">
             		<thead>
             			<tr>
@@ -131,7 +127,7 @@
             			</tr>
             		</thead>
 
-            		<tbody></tbody>
+            		<tbody id="beer-body"></tbody>
             	</table>			
             </div>
            
@@ -139,9 +135,7 @@
 
        </div>
 
-       <div class="col-sm-6">
-        	<div id="map"></div>
-       </div>
+       
     </div>
 
 		
