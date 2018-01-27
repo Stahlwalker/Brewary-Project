@@ -326,28 +326,7 @@ console.log(moment(new Date()).format("DD/MM/YY hh:mm A"));*/
     // Log everything that's coming out of snapshot
     console.log(childSnapshot.val());
 
-/*    console.log(childSnapshot.val().employeeName);
-    console.log(childSnapshot.val().role);
-    console.log(childSnapshot.val().startDate);
-    console.log(childSnapshot.val().monthlyRate);
-    console.log(childSnapshot.val().dateAdded);*/
+  $("#beer-table2 > tbody").append("<tr><td>" + childSnapshot.val().beerName + "</td><td>" + childSnapshot.val().location + "</td><td>" + childSnapshot.val().thoughts +"</td></tr>");
 
-
-    // / full list of items to the well
-    $("#name-favorites").append(
-      "<div class='row'><div class='col-lg-4'>"
-      + childSnapshot.val().beerName
-      + "</div><div class='col-lg-4'>")
- 
-    $("#location-favorites").append(
-      "<div class='row'><div class='col-lg-4'>"
-      + childSnapshot.val().location
-      + "</div><div class = 'col-lg-4'>")
- 
-    $("#thoughts-favorites").append(
-      "<div class='row'><div class='col-lg-4'>"
-      + childSnapshot.val().thoughts
-      + "</div><div class = 'col-lg-4'></div>")
-  // Handle the errors
   }, function(errorObject) {
 });    

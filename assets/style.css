@@ -193,3 +193,9 @@ span.psw {
 #beer-close {
     color: rgba(234, 192, 37, 0.68)
 }
+
+#beer-section{
+    max-height: 300px;
+    overflow-y:scroll;
+    
+ }
