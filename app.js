@@ -137,7 +137,7 @@ $(document).on("click", "tr", function () {
     var beerDsc = $("<p>");
     beerDsc.text(beer.description);
     $('#beer-info').append(beerDsc);
-    
+
     document.getElementById('beer-popup').style.display = 'block';
 });
 
@@ -207,32 +207,17 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
         console.log(firebaseUser);
         uid = firebaseUser.uid;
         btnLogout.classList.remove('hide');
-         database.ref('users/' + uid).off("child_added");
+        database.ref('users/' + uid).off("child_added");
 
-        //var usersRef = database.ref.child("users");
-        
-        //console.log(eventID);    
-
-         // var where = "Where'd you find it?";
-         // var what = "What'd you think?";
-         // var name = "Name";
-
-        // var html = '<table class="table" id="user-table">' + 
-        //    '<thead>' + '<tr>'
-        //        '<th>"'+ name +'"</th>' +
-        //        '<th>"'+ where + '"</th>' +
-        //        '<th>"' + what + '"</th>' +
-        //    '</tr></thead></table>';
-        // $("#beer-section2").append(html);  
         $("#beer-table2 > tbody").empty();
-        database.ref('users/' + uid).on("child_added", function(childSnapshot){  
-            
+        database.ref('users/' + uid).on("child_added", function (childSnapshot) {
 
-        $("#beer-table2 > tbody").append("<tr><td>" + childSnapshot.val().beerName + "</td><td>" + 
-            childSnapshot.val().location + "</td><td>" + childSnapshot.val().thoughts + "</td></tr>");
+
+            $("#beer-table2 > tbody").append("<tr><td>" + childSnapshot.val().beerName + "</td><td>" +
+                childSnapshot.val().location + "</td><td>" + childSnapshot.val().thoughts + "</td></tr>");
 
         });
-        
+
     } else {
         console.log('not logged in');
         uid = "";
@@ -240,13 +225,12 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
         $("#beer-table2 > tbody").empty();
 
         database.ref('public/').on("child_added", function (childSnapshot) {
-    // Log everything that's coming out of snapshot
             console.log(childSnapshot.val());
-             
-            $("#beer-table2 > tbody").append("<tr><td>" + childSnapshot.val().beerName + "</td><td>" + 
+
+            $("#beer-table2 > tbody").append("<tr><td>" + childSnapshot.val().beerName + "</td><td>" +
                 childSnapshot.val().location + "</td><td>" + childSnapshot.val().thoughts + "</td></tr>");
-            }, function (errorObject) {});
-            $("#add-beer").on("click", function (event) {
+        }, function (errorObject) {});
+        $("#add-beer").on("click", function (event) {
             $("#beer-name").val("");
             $("#location").val("");
             $("#your-thoughts").val("");
@@ -261,18 +245,14 @@ $("#add-beer").on("click", function (event) {
     var beerName = $("#beer-name").val().trim();
     var location = $("#location").val().trim();
     var thoughts = $("#your-thoughts").val().trim();
-    //Get the user ID
-    //var newRef = database.ref('users/' + uid).push();
-    //eventID = newRef.key;
-    //console.log(eventID);
-    if(uid !== ""){
+
+    if (uid !== "") {
         database.ref('users/' + uid).push({
             beerName: beerName,
             location: location,
             thoughts: thoughts,
         });
-    }
-    else if(uid === ""){
+    } else if (uid === "") {
         database.ref('public/' + uid).push({
             beerName: beerName,
             location: location,
@@ -280,4 +260,11 @@ $("#add-beer").on("click", function (event) {
         });
 
     }
+});
+
+
+$("#add-beer").on("click", function (event) {
+    $("#beer-name").val("");
+    $("#location").val("");
+    $("#your-thoughts").val("");
 });
